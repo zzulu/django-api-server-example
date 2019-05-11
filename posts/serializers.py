@@ -3,9 +3,10 @@ from .models import Post, Comment
 
 
 class CommentSerializer(serializers.ModelSerializer):
+    user_name = serializers.CharField(source='user.username', read_only=True)
     class Meta:
         model = Comment
-        fields = ('id', 'content', 'created_at', 'updated_at',)
+        fields = ('id', 'content', 'user_name', 'created_at', 'updated_at',)
 
 
 class PostSerializer(serializers.ModelSerializer):
