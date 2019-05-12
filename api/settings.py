@@ -133,7 +133,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 CORS_ORIGIN_WHITELIST = [
     "localhost:5500",
-    "https://zzulu.github.com/vue-client-example",
+    "zzulu.github.io",
 ]
 
 # REST API Default Classes
